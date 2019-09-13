@@ -1,5 +1,5 @@
 import React from 'react';
-
+import TodoList from "./TodoList";
 
 class Todo extends React.Component {
     // you will need a place to store your state in this component.
@@ -8,7 +8,7 @@ class Todo extends React.Component {
     render() {
         console.log(this.props.pendingTodo);
         return this.props.pendingTodo.map((todo) => (
-            <h2>{ todo.task}</h2>
+            <TodoList key={todo.id} todo={todo}/>
         ));
     }
 }
